@@ -2,7 +2,7 @@ package com.fyayc.micro.apiextension.web;
 
 public class ErrorModel {
 	public String code;
-	public String messsage;
+	public String message;
 	
 	public ErrorModel() {
 		super();
@@ -10,7 +10,7 @@ public class ErrorModel {
 	public ErrorModel(String code, String messsage) {
 		super();
 		this.code = code;
-		this.messsage = messsage;
+		this.message = messsage;
 	}
 	public String getCode() {
 		return code;
@@ -19,9 +19,9 @@ public class ErrorModel {
 		this.code = code;
 	}
 	public String getMesssage() {
-		return messsage;
+		return message;
 	}
 	public void setMesssage(String messsage) {
-		this.messsage = messsage;
+		this.message = messsage;
 	}
 }
