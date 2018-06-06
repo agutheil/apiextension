@@ -1,12 +1,13 @@
-package com.fyayc.micro.apiextension.model;
+package com.fyayc.micro.apiextension.web;
 
-public class BadRequestModel {
+public class ErrorModel {
 	public String code;
 	public String messsage;
-	public BadRequestModel() {
+	
+	public ErrorModel() {
 		super();
 	}
-	public BadRequestModel(String code, String messsage) {
+	public ErrorModel(String code, String messsage) {
 		super();
 		this.code = code;
 		this.messsage = messsage;
@@ -23,5 +24,4 @@ public class BadRequestModel {
 	public void setMesssage(String messsage) {
 		this.messsage = messsage;
 	}
-	
 }
