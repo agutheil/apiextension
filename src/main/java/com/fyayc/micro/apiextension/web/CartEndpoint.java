@@ -1,8 +1,5 @@
 package com.fyayc.micro.apiextension.web;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;

@@ -7,10 +7,10 @@ public class ErrorModel {
 	public ErrorModel() {
 		super();
 	}
-	public ErrorModel(String code, String messsage) {
+	public ErrorModel(String code, String message) {
 		super();
 		this.code = code;
-		this.message = messsage;
+		this.message = message;
 	}
 	public String getCode() {
 		return code;
@@ -18,10 +18,10 @@ public class ErrorModel {
 	public void setCode(String code) {
 		this.code = code;
 	}
-	public String getMesssage() {
+	public String getMessage() {
 		return message;
 	}
-	public void setMesssage(String messsage) {
-		this.message = messsage;
+	public void setMessage(String message) {
+		this.message = message;
 	}
 }
