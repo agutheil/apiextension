@@ -28,9 +28,44 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-compress</artifactId>
+			<version>1.16</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>apiextension</finalName>
+		<plugins>
+			<plugin>
+				<groupId>fish.payara.maven.plugins</groupId>
+				<artifactId>payara-micro-maven-plugin</artifactId>
+				<version>1.0.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>bundle</goal>
+							<goal>start</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<useUberJar>false</useUberJar>
+					<daemon>false</daemon>
+					<javaPath>C:/Program Files/Java/jdk1.8.0_171/bin/java</javaPath>
+					<payaraMicroAbsolutePath>C:/libs/payara-micro-5.182.jar</payaraMicroAbsolutePath>
+					<deployArtifacts>
+						<artifactItem>
+							<groupId>com.fyayc.micro</groupId>
+							<artifactId>apiextension</artifactId>
+							<version>0.0.1-SNAPSHOT</version>
+							<type>war</type>
+						</artifactItem>
+					</deployArtifacts>
+					<deployWar>true</deployWar>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -38,4 +73,5 @@
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 		<microprofile.version>1.3</microprofile.version>
 	</properties>
+
 </project>
