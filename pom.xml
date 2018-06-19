@@ -52,8 +52,8 @@
 				<configuration>
 					<useUberJar>false</useUberJar>
 					<daemon>false</daemon>
-					<javaPath>C:/Program Files/Java/jdk1.8.0_171/bin/java</javaPath>
-					<payaraMicroAbsolutePath>C:/libs/payara-micro-5.182.jar</payaraMicroAbsolutePath>
+					<javaPath>${java-home}</javaPath>
+					<payaraMicroAbsolutePath>${payara-home}</payaraMicroAbsolutePath>
 					<deployArtifacts>
 						<artifactItem>
 							<groupId>com.fyayc.micro</groupId>
