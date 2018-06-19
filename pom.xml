@@ -44,7 +44,6 @@
 				<executions>
 					<execution>
 						<goals>
-							<goal>bundle</goal>
 							<goal>start</goal>
 						</goals>
 					</execution>
@@ -54,15 +53,33 @@
 					<daemon>false</daemon>
 					<javaPath>${java-home}</javaPath>
 					<payaraMicroAbsolutePath>${payara-home}</payaraMicroAbsolutePath>
-					<deployArtifacts>
-						<artifactItem>
-							<groupId>com.fyayc.micro</groupId>
-							<artifactId>apiextension</artifactId>
-							<version>0.0.1-SNAPSHOT</version>
-							<type>war</type>
-						</artifactItem>
-					</deployArtifacts>
+					<artifactItem>
+						<groupId>com.fyayc.micro</groupId>
+						<artifactId>apiextension</artifactId>
+						<version>0.0.1-SNAPSHOT</version>
+						<type>war</type>
+					</artifactItem>
 					<deployWar>true</deployWar>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>fish.payara.maven.plugins</groupId>
+				<artifactId>payara-micro-maven-plugin</artifactId>
+				<version>1.0.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>stop</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<artifactItem>
+						<groupId>com.fyayc.micro</groupId>
+						<artifactId>apiextension</artifactId>
+						<version>0.0.1-SNAPSHOT</version>
+						<type>war</type>
+					</artifactItem>
 				</configuration>
 			</plugin>
 		</plugins>
